@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Fluxer mobile threads design flow</title>
+  <desc id="desc">Mobile threads proposal using Flutter client drawer and bottom sheet patterns.</desc>
+  <defs>
+    <style>
+      .bg { fill: #101216; }
+      .phone { fill: #151820; stroke: #323844; stroke-width: 2; }
+      .surface { fill: #1d2027; }
+      .drawer { fill: #181b22; }
+      .sheet { fill: #242832; }
+      .row { fill: #2a2f39; }
+      .selected { fill: #343945; }
+      .accent { stroke: #8b5cf6; stroke-width: 2; }
+      .accentFill { fill: #8b5cf6; }
+      .green { fill: #22c55e; }
+      .blue { fill: #60a5fa; }
+      .muteline { stroke: #3c4351; stroke-width: 1; }
+      .text { fill: #eef1f7; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .muted { fill: #9aa3b4; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .dim { fill: #6f7888; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .tiny { font-size: 13px; }
+      .small { font-size: 16px; }
+      .body { font-size: 18px; }
+      .h { font-size: 25px; font-weight: 700; }
+      .label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="1500"/>
+  <text x="54" y="62" class="text h">Threads, Fluxer-native mobile flow</text>
+  <text x="54" y="94" class="muted small">Uses the Flutter client's drawer, channel row and bottom sheet patterns, not desktop hover metaphors.</text>
+
+  <g transform="translate(70 150)">
+    <rect class="phone" x="0" y="0" width="320" height="660" rx="34"/>
+    <rect class="surface" x="16" y="46" width="288" height="568" rx="10"/>
+    <rect class="drawer" x="16" y="46" width="288" height="54" rx="10"/>
+    <text x="36" y="80" class="text body" font-weight="700"># general</text>
+    <text x="248" y="80" class="muted body">thread</text>
+    <line class="muteline" x1="16" y1="100" x2="304" y2="100"/>
+    <circle class="accentFill" cx="52" cy="140" r="18"/>
+    <text x="80" y="134" class="text small" font-weight="700">Elliot</text>
+    <text x="80" y="160" class="text small">Let's split the launch notes out.</text>
+    <rect class="row" x="68" y="180" width="204" height="118" rx="8"/>
+    <text x="88" y="208" class="text small" font-weight="700">Message actions</text>
+    <text x="88" y="238" class="muted small">Reply</text>
+    <text x="88" y="268" class="text small">Start new thread</text>
+    <text x="218" y="268" class="dim small">thread</text>
+    <text x="88" y="292" class="muted small">Forward</text>
+    <text x="34" y="646" class="muted tiny">Long press opens a bottom/action sheet. No hover-only dependency.</text>
+  </g>
+
+  <g transform="translate(440 150)">
+    <rect class="phone" x="0" y="0" width="320" height="660" rx="34"/>
+    <rect class="surface" x="16" y="46" width="288" height="568" rx="10"/>
+    <text x="36" y="84" class="text body" font-weight="700"># general</text>
+    <circle class="blue" cx="52" cy="136" r="18"/>
+    <text x="80" y="132" class="text small" font-weight="700">Darlene</text>
+    <text x="80" y="158" class="text small">Can we make this a thread?</text>
+    <rect class="sheet" x="16" y="324" width="288" height="290" rx="24"/>
+    <rect class="dim" x="132" y="342" width="56" height="4" rx="2"/>
+    <text x="36" y="382" class="text body" font-weight="700">Start new thread</text>
+    <text x="36" y="418" class="muted tiny" font-weight="700">THREAD NAME</text>
+    <rect class="row" x="36" y="430" width="248" height="42" rx="6"/>
+    <text x="52" y="457" class="text small">launch notes</text>
+    <text x="36" y="504" class="muted tiny" font-weight="700">REMAIN OPEN</text>
+    <rect class="row" x="36" y="516" width="88" height="42" rx="6"/>
+    <text x="74" y="543" class="text small">7</text>
+    <rect class="row" x="136" y="516" width="106" height="42" rx="6"/>
+    <text x="166" y="543" class="text small">days</text>
+    <rect class="accentFill" x="36" y="572" width="248" height="34" rx="6"/>
+    <text x="113" y="595" class="text small">Create thread</text>
+    <text x="34" y="646" class="muted tiny">Expiry selector is two controls: number plus unit.</text>
+  </g>
+
+  <g transform="translate(810 150)">
+    <rect class="phone" x="0" y="0" width="320" height="660" rx="34"/>
+    <rect class="drawer" x="16" y="46" width="288" height="568" rx="10"/>
+    <text x="36" y="84" class="text body" font-weight="700">Robotics Club</text>
+    <text x="36" y="130" class="muted tiny" font-weight="700">TEXT CHANNELS</text>
+    <rect class="selected" x="30" y="146" width="256" height="38" rx="5"/>
+    <text x="46" y="171" class="text small"># general</text>
+    <g transform="translate(52 194)">
+      <path d="M0 0 V88" class="accent" opacity=".72"/>
+      <rect class="row" x="14" y="-12" width="210" height="36" rx="5"/>
+      <text x="30" y="11" class="text small">thread design pass</text>
+      <text x="160" y="11" class="muted tiny">Joined</text>
+      <rect x="14" y="36" width="210" height="36" rx="5" fill="transparent"/>
+      <text x="30" y="59" class="muted small">launch copy audit</text>
+      <text x="160" y="59" class="dim tiny">Preview</text>
+    </g>
+    <text x="46" y="330" class="muted small"># news-updates</text>
+    <text x="46" y="374" class="muted small"># memes</text>
+    <text x="34" y="646" class="muted tiny">Joined rows persist. Preview rows disappear after navigation.</text>
+  </g>
+
+  <g transform="translate(70 880)">
+    <rect class="phone" x="0" y="0" width="320" height="500" rx="34"/>
+    <rect class="surface" x="16" y="46" width="288" height="408" rx="10"/>
+    <text x="36" y="84" class="text body" font-weight="700"># general</text>
+    <rect class="sheet" x="16" y="128" width="288" height="326" rx="24"/>
+    <rect class="dim" x="132" y="146" width="56" height="4" rx="2"/>
+    <text x="36" y="188" class="text body" font-weight="700">Threads</text>
+    <rect class="row" x="36" y="216" width="248" height="66" rx="8"/>
+    <text x="52" y="242" class="text small" font-weight="700">thread design pass</text>
+    <text x="52" y="266" class="muted tiny">Open, Darlene, 3 min ago</text>
+    <rect class="row" x="36" y="294" width="248" height="66" rx="8"/>
+    <text x="52" y="320" class="text small" font-weight="700">qa notes</text>
+    <text x="52" y="344" class="muted tiny">Closed, can reopen by message</text>
+    <rect class="row" x="36" y="372" width="248" height="66" rx="8"/>
+    <text x="52" y="398" class="muted small" font-weight="700">old launch room</text>
+    <text x="52" y="422" class="dim tiny">Archived, moderator only reopen</text>
+  </g>
+
+  <g transform="translate(440 880)">
+    <rect class="phone" x="0" y="0" width="320" height="500" rx="34"/>
+    <rect class="surface" x="16" y="46" width="288" height="408" rx="10"/>
+    <text x="36" y="84" class="text body" font-weight="700">thread design pass</text>
+    <text x="36" y="116" class="muted small">Thread under #general</text>
+    <circle class="accentFill" cx="52" cy="166" r="18"/>
+    <text x="80" y="162" class="text small" font-weight="700">Elliot</text>
+    <text x="80" y="188" class="text small">Here is the focused context.</text>
+    <rect class="row" x="36" y="350" width="248" height="56" rx="7"/>
+    <text x="52" y="384" class="muted small">Message thread design pass</text>
+    <text x="36" y="436" class="muted tiny">Header swaps # icon for thread icon and keeps parent context visible.</text>
+  </g>
+
+  <g transform="translate(810 880)">
+    <rect class="phone" x="0" y="0" width="320" height="500" rx="34"/>
+    <rect class="surface" x="16" y="46" width="288" height="408" rx="10"/>
+    <text x="36" y="84" class="text body" font-weight="700">Admin safety</text>
+    <rect class="row" x="36" y="122" width="248" height="72" rx="8"/>
+    <text x="52" y="150" class="text small">ThreadID input</text>
+    <text x="52" y="174" class="muted tiny mono">Browse Thread</text>
+    <rect class="row" x="36" y="218" width="248" height="104" rx="8"/>
+    <text x="52" y="246" class="text small">Resolved identity</text>
+    <text x="52" y="272" class="muted tiny">Channel / Thread / Starter / Community</text>
+    <text x="52" y="296" class="dim tiny">Each segment links to its admin page.</text>
+    <rect class="row" x="36" y="346" width="248" height="62" rx="8"/>
+    <text x="52" y="374" class="text small">Communities page</text>
+    <text x="52" y="398" class="muted tiny">Thread rows half-height and indented.</text>
+  </g>
+</svg>

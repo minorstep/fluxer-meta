@@ -140,7 +140,7 @@
       <line class="line" x1="18" y1="52" x2="218" y2="52"/>
       <rect class="hover" x="14" y="72" width="208" height="58" rx="6"/>
       <text x="28" y="96" class="text small" font-weight="700">thread design pass</text>
-      <text x="28" y="116" class="muted tiny">Darlene, 3 min ago</text>
+      <text x="28" y="116" class="muted tiny">Following - mute from row menu</text>
       <rect class="panel" x="14" y="144" width="208" height="58" rx="6"/>
       <text x="28" y="168" class="text small" font-weight="700">qa notes</text>
       <text x="28" y="188" class="muted tiny">Closed, 1h ago</text>

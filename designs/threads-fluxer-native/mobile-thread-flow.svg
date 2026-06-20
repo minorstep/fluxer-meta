@@ -117,6 +117,7 @@
     <rect class="surface" x="16" y="46" width="288" height="408" rx="10"/>
     <text x="36" y="84" class="text body" font-weight="700">thread design pass</text>
     <text x="36" y="116" class="muted small">Thread under #general</text>
+    <text x="226" y="116" class="muted tiny">bell Mute</text>
     <circle class="accentFill" cx="52" cy="166" r="18"/>
     <text x="80" y="162" class="text small" font-weight="700">Elliot</text>
     <text x="80" y="188" class="text small">Here is the focused context.</text>

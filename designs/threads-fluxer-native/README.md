@@ -149,11 +149,22 @@ Thread creation time should use the thread snowflake, not the parent channel tim
 ## Permission Rules
 
 - Threads inherit parent channel permissions and notification settings.
+- Joined users can override a single thread without leaving it: `Inherit channel`, `All messages`, `Mentions only` or `Mute thread`.
+- Muting a thread stops non-mention notifications for that thread only. Parent channel notifications and direct mentions still behave normally.
 - Start-thread controls are hidden when the user lacks permission.
 - If permissions change while the modal or sheet is open, confirm fails with inline copy.
 - Users join by creating, sending a message or explicitly joining.
 - Moderators and admins are not automatically joined.
 - Bot parity is required: bots can create, send, receive and listen for thread state events.
+
+## Thread Notifications
+
+The notification control stays thread-scoped, not channel-scoped. This covers high-volume social threads such as birthday wishes without forcing the user to leave the thread or mute the whole parent channel.
+
+- Desktop: right-click a joined thread row or open the thread list row menu, then choose `Thread notifications`.
+- Mobile: use the bell action in the thread header or the long-press row action from the thread list sheet.
+- Rows show a small `Muted` or `Mentions` status only when the thread differs from the parent channel default.
+- Leaving a thread removes the row and its explicit notification override.
 
 ## Moderation And Admin
 
